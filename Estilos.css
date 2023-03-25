@@ -1,34 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap");
+:root {
+  --bg-blue: #04063b;
+  --container-blue: #101afa;
+  --divisor-blue: #1c6bba;
+  --paragraph-yellow: #e0d504;
+  --title-yellow: #faee05;
+  --shadow-yellow: #3b3801;
+  --gradient-orange: #de4309;
+  --details-orange: #fa280a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
 body {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
   background-color: white;
   background-attachment: fixed;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: italic;
 }
 
-.Contenedor {
-  border: 1px solid black;
-  width: 72%;
-  margin: 1px;
-  padding: 15%;
-  background-color: whitesmoke;
-}
-h1 {
-  color: black;
+.divisor-h {
+  height: 1px;
+  width: 90%;
+  background-color: var(--divisor-blue);
 }
 
-h2 {
-  color: black;
-  background-color: #e3de4a;
-  padding: 10px;
-  border: 10px solid black;
+.divisor-v {
+  height: 90%;
+  width: 1px;
+  background-color: var(--divisor-blue);
+}
+
+.Contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 70%;
+  height: 1200px;
+  gap: 10px;
+  background-color: var(--bg-blue);
+}
+.Left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 15px 0px 0px 15px;
+  width: 33%;
+  height: 100%;
+}
+.Left-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--paragraph-yellow);
+  margin-bottom: 40px;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  border-radius: 15px 0px 0px 15px;
+  position: relative;
+  background-image: linear-gradient(
+    0deg,
+    var(--bg-blue) 0% 70%,
+    transparent 80% 100%
+  );
+}
+.Left-section {
+  background-color: #e0d50435;
+  backdrop-filter: blur(20px);
   border-radius: 10px;
-  width: 280px;
+  padding: 5px;
+}
+.Left-section a {
+  color: var(--paragraph-yellow);
+}
+.Left-list {
+  color: var(--sky-blue);
+}
+.Left-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.Left-title {
+  font-size: 27px;
+}
+.Right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0px 15px 15px 0px;
+  padding: 10px;
+  gap: 50px;
+  width: 67%;
+  height: 100%;
+}
+.Right-article {
+  background-color: rgba(255, 255, 255, 0.154);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  padding: 10px;
+}
+.Right-list {
+  color: var(--paragraph-yellow);
+}
+.img {
+  border-radius: 15px 0px 0px 15px;
+  position: absolute;
+  z-index: 1;
+}
+h1 {
+  color: var(--title-yellow);
+  font-size: 40px;
+}
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 35px;
+  width: 100%;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+ul {
+  width: 100%;
+}
+li {
+  list-style: none;
+  width: 100%;
+}
+.text-gradientL {
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--gradient-orange),
+    var(--title-yellow)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-yellow {
+  color: var(--title-yellow);
+}
+
+.text-shadow {
+  color: var(--shadow-yellow);
 }
 
 .Text-Center {
   text-align: center;
 }
-.box {
-  border-color: black;
+
+.text-start {
+  text-align: start;
+}
+
+.subtitle {
+  color: var(--title-yellow);
+  text-decoration: underline;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 145px;
+  height: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--paragraph-yellow);
+  overflow: hidden;
+  background-color: var(--gradient-orange);
+  color: var(--shadow-yellow);
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-100 {
+  width: 100%;
+  background-color: var(--title-yellow);
+}
+
+.p-80 {
+  width: 80%;
+  background-color: var(--title-yellow);
 }
